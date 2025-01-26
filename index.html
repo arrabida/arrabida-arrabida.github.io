@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Quinta</title>
+</head>
+
+<body>
+	<br>
+	<h2>Quinta o Po<a style="color:green;text-decoration:none" href="./test.html">m</a>ar</h2>
+	<h4 style="color:green">shops, test</h4>
+</body>
+<br>
+<br>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+	<!-- Full-width images with number and caption text -->
+	<div class="mySlides fade">
+		<div class="numbertext">1 / 8</div>
+		<img src="./img/house.jpg">
+		<br><br><br>
+		<div class="text">Nice little country house</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">2 / 8</div>
+		<img src="./img/pomar.jpg">
+		<br><br><br>
+		<div class="text">Oranges, Lemons, Clementines, Pomegranates, Persimmon, Loquat</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">3 / 8</div>
+		<img src="./img/wasted_oranges.jpg">
+		<br><br><br>
+		<div class="text">From december till may, more oranges then you ever can eat</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">4 / 8</div>
+		<img src="./img/alpendera.jpg">
+		<br><br><br>
+		<div class="text">Caption Three</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">5 / 8</div>
+		<img src="./img/round_table.jpg">
+		<br><br><br>
+		<div class="text">Caption Three</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">6 / 8</div>
+		<img src="./img/garden_north_view.jpg">
+		<br><br><br>
+		<div class="text">North view, 40 km to the big city</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">7 / 8</div>
+		<img src="./img/garden_north_view2.jpg">
+		<br><br><br>
+		<div class="text">Caption Three</div>
+
+	</div>
+	<div class="mySlides fade">
+		<div class="numbertext">8 / 8</div>
+		<img src="./img/outside_south.jpg">
+		<br><br><br>
+		<div class="text">South view, Behind the mountains is the sea</div>
+	</div>
+
+	<!-- Next and previous buttons -->
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+	<span class="dot" onclick="currentSlide(1)"></span>
+	<span class="dot" onclick="currentSlide(2)"></span>
+	<span class="dot" onclick="currentSlide(3)"></span>
+	<span class="dot" onclick="currentSlide(4)"></span>
+	<span class="dot" onclick="currentSlide(5)"></span>
+	<span class="dot" onclick="currentSlide(6)"></span>
+	<span class="dot" onclick="currentSlide(7)"></span>
+	<span class="dot" onclick="currentSlide(8)"></span>
+</div>
+
+<!--
+	<br><br><br>
+	<a href="/home/ubuntu/Desktop/michel.pt/img/Quick Start Guide - John Schember.epub" download>Download link</a>
+	<br>
+	<a href="download.html">Download Page</a>
+-->
+
+<script>
+
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+		showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		if (n > slides.length) { slideIndex = 1 }
+		if (n < 1) { slideIndex = slides.length }
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex - 1].style.display = "block";
+		dots[slideIndex - 1].className += " active";
+	}
+</script>
+
+
+</html>
